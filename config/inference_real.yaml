@@ -1,0 +1,7 @@
+model_ckpt_path: "/data/tanjingyang/demo/e2e/parkinge2e/ckpt/exp_2024_11_12_12_10_12/epoch=91-val_loss=1.69.ckpt"
+training_config: "training_real"
+predict_mode: "topic"
+bev_input_backbone: 'efficient_net'
+trajectory_pub_frequency: 1
+cam_info_dir: "./dataset/B07_camera_info"
+progress_threshold: 0.97
