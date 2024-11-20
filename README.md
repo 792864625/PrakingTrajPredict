@@ -5,6 +5,10 @@ Trajectory Prediction in Simple Scenario based on LSS and Detr Decoder
 ![image](https://github.com/user-attachments/assets/98422c71-a084-43a8-81b1-8569098b0c2b)
 
 
+
+<img src="demo_resource/parking.mp4" height="250">
+
+
 ## 主要环境依赖
 ``` 
 pytorch 2.1.2  
@@ -14,7 +18,7 @@ python 3.8.8
 ## 仓库主要内容
 1. 一套基于车身信号和avm的数据集生成方案（C++）
 2. 一套avm可视化代码（python）
-3. 一些基于ParkingE2E(https://github.com/qintonguav/ParkingE2E)的魔改模型优化实验（python）
+3. 一些基于ParkingE2E(https://github.com/qintonguav/ParkingE2E) 的魔改模型优化实验（python）
 
 ## Train
 ``` 
@@ -50,7 +54,7 @@ json中以roll,yaw,pitch来记录相机的外参R，这里是根据右手定则�
 ![image](https://github.com/user-attachments/assets/ff901b70-eb17-49eb-bece-7afb1bad2944)  
 x,y,z为外参t, world watch camera position / coor camera2world  坐标系表征与坐标系转换区别：https://zhuanlan.zhihu.com/p/618604141  
 内参：fov,image_h,image_w
-#### 
+
 
 
 
