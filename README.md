@@ -46,13 +46,19 @@ e2e_dataset/
 
 
 ### 5.3 camera info说明
-json中以roll,yaw,pitch来记录相机的外参R，这里是根据右手定则算出的world2camera。这里的camera坐标系形态也是x为光轴,z垂直地面向上,y朝左手. 在训练代码中会用特定的矩阵将其转换成下图,然后进入到LSS模块。  
+json中以roll,yaw,pitch来记录相机的外参R，x,y,z为外参t      
+roll,yaw,pitch：world2camera (右手定则)  
+x,y,z : world watch camera position / coor camera2world  坐标系表征与坐标系转换区别：https://zhuanlan.zhihu.com/p/618604141  
+内参：fov,image_h,image_w  
+这里的camera坐标系形态是x为光轴,z垂直地面向上,y朝左手. 在训练代码中会用特定的矩阵将其转换成下图,然后进入到LSS模块。  
 ![image](https://github.com/user-attachments/assets/ff901b70-eb17-49eb-bece-7afb1bad2944)  
-x,y,z为外参t, world watch camera position / coor camera2world  坐标系表征与坐标系转换区别：https://zhuanlan.zhihu.com/p/618604141  
-内参：fov,image_h,image_w
+, 
+
 
 ### 5.4 轨迹点说明
-轨迹点保存在measurements中, 假设一段路径包含200帧图像, 那么就有200个轨迹点. 即基于世界坐标系(第一帧)的ego位姿(roll, yaw, pitch, x,y,z). 其中x,y,z为 world watch ego; roll yaw pitch为 world2ego
+轨迹点保存在measurements中, 假设一段路径包含200帧图像, 那么就有200个轨迹点. 即基于世界坐标系(第一帧)的ego位姿(roll, yaw, pitch, x,y,z).   
+x,y,z: world watch ego  
+roll yaw pitch: world2ego
 
 
 ## 6. 模型优化实验
